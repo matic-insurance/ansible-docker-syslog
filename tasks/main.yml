@@ -1,0 +1,9 @@
+---
+# tasks file for docker-syslog
+- name: Make docker use syslog
+  lineinfile: >
+    dest=/etc/default/docker regexp=^DOCKER_OPTS=
+    line='DOCKER_OPTS="--log-driver=syslog --log-opt tag={{ '{{' }}.Name{{ '}}' }}"'
+    insertafter="^#DOCKER_OPTS="
+  notify:
+    - Restart docker

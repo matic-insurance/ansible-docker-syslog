@@ -24,9 +24,9 @@ No dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Just include this role as in example:
 
-    - hosts: servers
+    - hosts: all
       roles:
          - role: matic-insurance.docker-syslog
 
